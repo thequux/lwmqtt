@@ -1,3 +1,4 @@
+#ifdef LWMQTT_OS_UNIX
 #include <arpa/inet.h>
 #include <errno.h>
 #include <memory.h>
@@ -184,3 +185,4 @@ lwmqtt_err_t lwmqtt_unix_network_write(void *ref, uint8_t *buffer, size_t len, s
 
   return LWMQTT_SUCCESS;
 }
+#endif // LWMQTT_OS_UNIX
